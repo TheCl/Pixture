@@ -1,9 +1,8 @@
 $(document).ready(function(){
 
 	$(".side__menu").click(function(){
-	    $(".side").css("width", "50%");
+	    $(".slideMenu").slideToggle(520);
 	});
-
 
 	/* This is basic - uses default settings */
 	
@@ -14,4 +13,43 @@ $(document).ready(function(){
  		pager: false
   });
 
+     $(".scroll").click(function () { 
+      var elementClick = $(this).attr("href");
+      var destination = $(elementClick).offset().top;
+      $('html,body').animate( { scrollTop: destination }, 1100 );
+      return false;
+    });
+
+  //   var addFunction = function(first, second){
+
+  //   	return first + second;
+  //   };
+
+  //  console.log(addFunction(5,3));
+
+  //   var multiFunction = function(third, fourth){
+
+  //   	return third * fourth;
+  //   };
+
+  //  console.log(multiFunction(5,3));
+
+  // console.log(addFunction(multiFunction(36325,9824),777));
+
+  // var areArraysSame = function(arrOne,arrTwo){
+  // 	if (arrOne.length != arrTwo.length) {
+  // 		return false;
+  // 	}
+  // 	for (var i = 1; i < arrTwo.length; i++) {
+  // 		if (arrOne[i] = arrTwo.length) {
+  // 			alert("Победа!");
+  // 		}
+  // 	}
+  // }
+  // 	console.log(areArraysSame([1,2],[1,2]));
+
+
+  		// $("h2").fadeOut(3000).fadeIn(3000);
+  		// $("h2").slideUp(3000).slideDown(3000);
+   
 });
