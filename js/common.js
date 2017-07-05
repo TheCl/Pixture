@@ -10,7 +10,9 @@ $(document).ready(function(){
 	
     $('.bxslider').bxSlider({
  		slideMargin: 20,
- 		pager: false
+ 		pager: true,
+ 		responsive: true,
+ 		auto:true
   });
 
      $(".scroll").click(function () { 
@@ -19,6 +21,10 @@ $(document).ready(function(){
       $('html,body').animate( { scrollTop: destination }, 1100 );
       return false;
     });
+
+
+
+
 
   //   var addFunction = function(first, second){
 

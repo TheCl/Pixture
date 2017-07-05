@@ -90,10 +90,16 @@ header{
 .side__comment{
 	text-transform: uppercase;
 	 transform: rotate(180deg);
+	 -webkit-transform: rotate(180deg); //Chrome, Safari
+	-moz-transform: rotate(180deg); //Firefox
+	-o-transform: rotate(180deg); //Opera
+	-ms-transform: rotate(180deg); //IE
 	 vertical-align: middle;
 	 padding-top: 100px;	
 	 position: relative;
-	 width: 13px;
+	 width: 100%;
+	 display: flex;
+	 justify-content:center;
 
     &:before{
     	content:"";
@@ -241,23 +247,22 @@ header{
 .slider{
 
 	.wrapper{
-		padding-right: 210px;
 		background-image: url("../img/main_grad_bg.png");	
 		flex-direction:column;
 		position: relative;
 		border-top:1px solid rgba(255,255,255,0.5);
 		border-bottom:1px solid rgba(255,255,255,0.5);
 
-		&::after{
-			content:"";
-			width: 24px;
-			height: 42px;
-			background-image: url("../img/arrow_icon_big.png");
-			position:absolute;
-			righ:6%;
-			top:40%;
+		// &::after{
+		// 	content:"";
+		// 	width: 24px;
+		// 	height: 42px;
+		// 	background-image: url("../img/arrow_icon_big.png");
+		// 	position:absolute;
+		// 	righ:6%;
+		// 	top:40%;
 			
-		}
+		// }
 
 		.slider__h2{
 			font-size: 18px;
